@@ -10,15 +10,29 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
+		"@deno/kv": "^0.7.0",
+		"@hono/zod-validator": "^0.2.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"autoprefixer": "^10.4.19",
+		"hono": "^4.4.0",
+		"lucia": "^3.2.0",
 		"svelte": "^4.2.7",
 		"svelte-check": "^3.6.0",
 		"sveltekit-adapter-deno": "^0.12.1",
+		"sveltekit-superforms": "^2.14.0",
+		"tailwindcss": "^3.4.3",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
-		"vite": "^5.0.3"
+		"vite": "^5.0.3",
+		"zod": "^3.23.8"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@olli/kvdex": "npm:@jsr/olli__kvdex@^1.0.1",
+		"@petamoriken/float16": "^3.8.7",
+		"@rubiks/rubiks": "npm:@jsr/rubiks__rubiks@^1.2.9",
+		"@ts-rex/bcrypt": "npm:@jsr/ts-rex__bcrypt@^1.0.3"
+	}
 }
