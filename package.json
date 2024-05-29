@@ -7,17 +7,28 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write ."
 	},
 	"devDependencies": {
 		"@deno/kv": "^0.7.0",
 		"@hono/zod-validator": "^0.2.1",
+		"@olli/kvdex": "npm:@jsr/olli__kvdex@^1.0.1",
+		"@petamoriken/float16": "npm:@jsr/petamoriken__float16@^3.8.7",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@ts-rex/bcrypt": "npm:@jsr/ts-rex__bcrypt@^1.0.3",
+		"@types/ws": "^8.5.10",
 		"autoprefixer": "^10.4.19",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.39.0",
 		"hono": "^4.4.0",
 		"lucia": "^3.2.0",
+		"prettier": "^3.2.5",
+		"prettier-plugin-svelte": "^3.2.3",
 		"svelte": "^4.2.7",
 		"svelte-check": "^3.6.0",
 		"sveltekit-adapter-deno": "^0.12.1",
@@ -28,11 +39,5 @@
 		"vite": "^5.0.3",
 		"zod": "^3.23.8"
 	},
-	"type": "module",
-	"dependencies": {
-		"@olli/kvdex": "npm:@jsr/olli__kvdex@^1.0.1",
-		"@petamoriken/float16": "^3.8.7",
-		"@rubiks/rubiks": "npm:@jsr/rubiks__rubiks@^1.2.9",
-		"@ts-rex/bcrypt": "npm:@jsr/ts-rex__bcrypt@^1.0.3"
-	}
+	"type": "module"
 }

@@ -4,8 +4,7 @@ declare global {
 	namespace App {
 		// interface Error {}
 		interface Locals {
-			user: import("lucia").User | null;
-			session: import("lucia").Session | null;
+			auth: AuthLocals
 		}
 		// interface PageData {}
 		// interface PageState {}
@@ -13,4 +12,11 @@ declare global {
 	}
 }
 
-export {};
+type AuthLocals =
+	| {
+			user: import('lucia').User
+			session: import('lucia').Session
+	  }
+	| { user: null; session: null }
+
+export {}
